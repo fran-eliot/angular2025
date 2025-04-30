@@ -1,0 +1,20 @@
+Nombre:<input type="text" [(ngModel)]="nombre"><br><br>
+Email:<input type="text" [(ngModel)]="email"><br><br>
+Telefono:<input type="text" [(ngModel)]="telefono"><br><br>
+<button (click)="guardar()">Guardar</button>
+<button (click)="mostrar()">Mostrar</button><br><br>
+<table border="1px" *ngIf="visible">
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Telefono</th>
+    <th>Borrar</th>
+  </tr>
+  <tr *ngFor="let contacto of agenda">
+    <td>{{contacto.nombre}}</td>
+    <td>{{contacto.email}}</td>
+    <td>{{contacto.telefono}}</td>
+    <td><button (click)="borrar(contacto)">Borrar</button></td>
+  </tr>
+</table>
+

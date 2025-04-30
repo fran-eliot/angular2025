@@ -1,0 +1,11 @@
+<div>
+Nota: <input type="number" [(ngModel)]="nota" placeholder="Ingresa una nota">
+<button (click)="guardar()">Guardar</button>
+<button (click)="datos()">Datos</button>
+</div>
+<div>
+  Media: <span>{{ media }}</span><br>
+  Nota más alta: <span>{{ masAlta}}</span><br>
+  Nota más baja: <span>{{masBaja}}</span><br>
+  Total aprobados: <span>{{totalAprobados}}</span>
+</div>
