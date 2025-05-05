@@ -1,0 +1,20 @@
+Tematica:
+<select [(ngModel)]="tematica_seleccionada" (change)="obtener_resultados()">
+  <option value="Todas" selected="selected">Todas</option>
+  <option *ngFor="let tematica of tematicas" value="{{tematica}}">
+    {{ tematica }}
+  </option>
+</select>
+<hr>
+
+<table *ngIf="resultados.length>0" border="1" >
+  <tr>
+    <th>Temática</th>
+    <th>Dirección</th>
+  </tr>
+  <tr *ngFor="let r of resultados">
+    <td>{{r.tematica}}</td>
+    <td>{{r.direccion}}</td>
+  </tr>
+</table>
+

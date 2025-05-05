@@ -30,8 +30,9 @@ export class AgendaComponent {
     this.visible=!this.visible;
   }
 
-  borrar(contacto):void{
+  borrar(contacto:Contacto):void{
     this.agenda = this.agenda.filter(c => c !== contacto);
+    //this.agenda.splice(indice,1);
   }
 
 
