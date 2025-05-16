@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  // imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  data:any;
+  
+  saludar():void{
+      //const descuento:number=10;
+      //recoger en una variable el objeto etiqueta input
+      let caja:any=document.getElementById("nombre");
+      //recoge el objeto div
+      let res:any=document.getElementById("mensaje");
+      res.innerHTML=`<b>Bienvenido a mi página sr/a. ${caja.value}</b>`
+    }
+}
+
+
+
