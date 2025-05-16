@@ -51,7 +51,7 @@ Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos 
 5. Abre un Pull Request.
 
 ## Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE.txt) para más detalles.
 
 ## Contacto
 Para preguntas o comentarios, puedes abrir un issue en este repositorio o contactar a ramirez.martin.francisco@gmail.com
