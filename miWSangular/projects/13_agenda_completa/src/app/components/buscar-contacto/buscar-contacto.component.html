@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="form-group">
+    <label for="usr">Email:</label>
+    <input type="text" class="form-control" id="usr" [(ngModel)]="email">
+  </div>
+
+  <button class="btn btn-info" (click)="buscar()">Buscar</button>
+</div>
+<br><br>
+<div class="container" *ngIf="contacto">
+<b>Nombre: </b>{{contacto.nombre}}<br>
+<b>Email: </b>{{contacto.email}}<br>
+<b>Telefon: </b> {{contacto.telefono}}
+</div>
+
+

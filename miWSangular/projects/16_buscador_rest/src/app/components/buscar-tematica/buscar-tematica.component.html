@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="form-group">
+    <label for="usr">Introduce temática:</label>
+    <input type="text" class="form-control" id="usr" [(ngModel)]="tematicaSeleccionada">
+  </div>
+
+  <button class="btn btn-info" (click)="buscar()">Buscar</button>
+</div>
+<br><br>
+<div class="container" *ngFor="let libro of libros">
+    <b>URL: </b>{{libro.url}}<br>
+    <b>Tematica: </b>{{libro.tematica}}<br>
+    <b>Descripcion: </b> {{libro.descripcion}}
+    <hr>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h2>Seleccione provincia</h2>
+        <select [(ngModel)] = "provinciaSeleccionada" (change)="cargarMunicipiosProvincia()">
+          <option *ngFor="let provincia of provincias" value="{{provincia.CODPROV}}">
+            {{provincia.NOMBRE_PROVINCIA}}
+          </option>
+        </select>
+
+        <table *ngIf='municipiosProvincia.length>0' class="table table-bordered table-striped table-hover" >
+    <thead>
+      <tr>
+      <th>Nombre</th>
+      <th>Habitantes</th>
+      <th>Superficie</th>
+      <th>Altitud</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let municipio of municipiosProvincia'>
+      <td>{{municipio.NOMBRE}}</td>
+      <td>{{municipio.POBLACION_MUNI}}</td>
+      <td>{{municipio.SUPERFICIE}}</td>
+      <td>{{municipio.ALTITUD}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+

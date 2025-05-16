@@ -1,0 +1,19 @@
+<div class="container border rounded center">
+  <div class="form-group">
+    <label for="usr">Nombre:</label>
+    <input type="text" class="form-control" id="usr" [(ngModel)]="nombre">
+  </div>
+  <div class="form-group">
+    <label for="usr">Email:</label>
+    <input type="text" class="form-control" id="usr" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+    <label for="usr">Telefono</label>
+    <input type="text" class="form-control" id="usr" [(ngModel)]="telefono">
+  </div>
+
+  <button class="btn btn-info" (click)="guardar()">Guardar</button><br><br>
+  <div class="container text-danger">
+    <b>{{mensaje}}</b>
+  </div>
+</div>
