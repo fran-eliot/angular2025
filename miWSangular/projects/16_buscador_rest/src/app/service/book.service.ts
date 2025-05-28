@@ -7,13 +7,16 @@ import { Book } from '../model/Book';
   providedIn: 'root'
 })
 export class BookService {
-  urlBase:string = 'http://localhost:8000/buscador';
+  // urlBase:string = 'http://localhost:8000/buscador';
+  urlBase:string = 'http://localhost:3000/buscador';
 
   constructor(private http:HttpClient) { }
 
   buscar(tematica:string):Observable<Book[]>{
-     const url_busqueda:string = `${this.urlBase}/buscar?tematica=${tematica}`;
-     return this.http.get<Book[]>(url_busqueda);
+    //  const url_busqueda:string = `${this.urlBase}/buscar?tematica=${tematica}`;
+    const url_busqueda:string = `${this.urlBase}/buscar`;
+    //  return this.http.get<Book[]>(url_busqueda);
+    return this.http.get<Book[]>(`${url_busqueda}/${tematica}`);
   }
 
   alta(libro:Book):Observable<void>{
