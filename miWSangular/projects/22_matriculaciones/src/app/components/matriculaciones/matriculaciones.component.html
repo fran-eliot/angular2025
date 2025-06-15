@@ -1,0 +1,26 @@
+<div class="container">
+  Seleccione  curso:
+  <select [(ngModel)]="cursoSeleccionado" (change)="cargarMatriculas()">
+    <option *ngFor="let c of cursos" value="{{c.idCurso}}">
+      {{c.nombre}}
+    </option>
+  </select>
+  <br><br>
+  <table class="table table-striped" *ngIf="cursoSeleccionado">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Curso</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of matriculas">
+        <td>{{m.nombre}}</td>
+        <td>{{m.email}}</td>
+        <td>{{m.curso}}</td>
+        <td>{{m.nota}}</td>
+      </tr>
+    </tbody>
+  </table>
