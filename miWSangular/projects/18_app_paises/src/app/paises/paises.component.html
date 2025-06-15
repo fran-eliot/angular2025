@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- <button (click)="cargarPaises()">Ver paises</button><br> -->
+  <h2>Seleccione continente</h2>
+        <select [(ngModel)] = "continenteSeleccionado" (change)="cargarPaisesContinente()">
+          <option *ngFor="let continente of continentes" value="{{continente}}">
+            {{continente}}
+          </option>
+        </select>
+
+  <table *ngIf='paisesContinente.length>0' class="table table-bordered table-striped table-hover" >
+    <thead>
+      <tr>
+      <th>Nombre</th>
+      <th>Capital</th>
+      <th>Continente</th>
+      <th>Poblacion</th>
+      <th>Bandera</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let pais of paisesContinente'>
+      <td>{{pais.nombre}}</td>
+      <td>{{pais.capital}}</td>
+      <td>{{pais.continente}}</td>
+      <td>{{pais.poblacion}}</td>
+      <td><img [src]='pais.bandera' alt='Bandera de {{ pais.nombre }}' width='50px' />
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+
