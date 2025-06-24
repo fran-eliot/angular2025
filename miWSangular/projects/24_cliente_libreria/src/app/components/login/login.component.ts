@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { LibreriaService } from '../../service/libreria.service';
 import { Cliente } from '../../model/Cliente';
 import { FormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { CuadroDialogoComponent } from '../cuadro-dialogo/cuadro-dialogo.component';
 
 @Component({
   selector: 'app-login',
@@ -15,12 +17,19 @@ export class LoginComponent {
   password:string;
   mensaje:string;
 
-  constructor(private libreriaService:LibreriaService){}
+  constructor(private libreriaService:LibreriaService,
+    private dialog:MatDialog){}
 
   login(form){
     if(form.invalid){
-      alert("Los datos del formulario no son válidos!!!");
+      this.dialog.open(CuadroDialogoComponent,{
+        data:{mensaje:'Los datos del formulario no son válidos!!'}
+      });
       return;
+    }else{
+      this.dialog.open(CuadroDialogoComponent,{
+        data:{mensaje:'Los datos del formulario tienen el formato correcto. Ahora vamos a validarte!!'}
+      });
     }
     this.libreriaService.autentificar(this.usuario,this.password)
     .subscribe(data => {
