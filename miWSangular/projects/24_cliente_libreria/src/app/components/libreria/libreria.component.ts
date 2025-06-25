@@ -31,11 +31,11 @@ export class LibreriaComponent {
   }
 
   getCatalogo(){
-    this.libreriaService.catalogo().suscribe(data => this.libros=data);
+    this.libreriaService.catalogo().subscribe(data => this.libros=data);
   }
 
   getCompras(){
-    this.libreriaService.compras().suscribe(data => this.compras=data);
+    this.libreriaService.compras().subscribe(data => this.compras=data);
   }
 
 }
