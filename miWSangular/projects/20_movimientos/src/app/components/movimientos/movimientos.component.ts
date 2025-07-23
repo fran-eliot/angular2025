@@ -8,11 +8,12 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { FechaPersonalPipe } from '../../pipes/fecha-personal.pipe';
 
 
 @Component({
   selector: 'app-movimientos',
-  imports: [FormsModule,CommonModule,MatTableModule, MatPaginatorModule,MatSortModule,MatButtonModule, MatInputModule],
+  imports: [FormsModule, CommonModule, MatTableModule, MatPaginatorModule, MatSortModule,MatButtonModule, MatInputModule, FechaPersonalPipe],
   templateUrl: './movimientos.component.html',
   styleUrl: './movimientos.component.css'
 })
